@@ -286,14 +286,14 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="info@woodwayskenya.com"
+                                    android:text="info@kitengelaglass.com"
                                     android:textColor="#616161"
                                     android:textSize="14sp" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="www.woodways.com"
+                                    android:text="www.kitengelaglass.com"
                                     android:textColor="#616161"
                                     android:textSize="14sp" />
                             </LinearLayout>
@@ -306,11 +306,12 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="P.O Box 255-40656, Nairobi"
+                                    android:text="Ongata Rongai, off Maasai Lodge"
                                     android:textColor="#616161"
                                     android:textSize="14sp" />
 
                                 <TextView
+                                    android:visibility="gone"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Road C, Off Enterprise Rd, Industrial Area"

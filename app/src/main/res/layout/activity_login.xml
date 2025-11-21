@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@drawable/wall_cladding"
+    android:background="@drawable/bg_login"
     tools:context=".Clients.Login">
 
     <androidx.cardview.widget.CardView
@@ -28,7 +28,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Woodway Ltd Login"
+                android:text="Kitengela Glass Login"
                 android:id="@+id/txv_stafflogin"
                 android:textSize="25sp"
                 android:textAlignment="center"

@@ -164,7 +164,7 @@ public class VisitItems extends AppCompatActivity {
                     if (materials.length() > 0) {
                         materials.append(", ");
                     }
-                    materials.append("Circular saw");
+                    materials.append("Ceiling plate");
                     edt_materials.setText(materials);
                 }
             }
@@ -216,7 +216,7 @@ public class VisitItems extends AppCompatActivity {
                     if (materials.length() > 0) {
                         materials.append(", ");
                     }
-                    materials.append("Safety gear");
+                    materials.append("Junction box");
                     edt_materials.setText(materials);
                 }
             }

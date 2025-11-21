@@ -10,7 +10,7 @@
             android:id="@+id/nav_home"/>
         <item
             android:id="@+id/nav_new_orders"
-            android:title="New Payments" />
+            android:title="New Products Payments" />
          <item
             android:id="@+id/nav_approvedOrders"
             android:title="Approved Payments" />
@@ -62,11 +62,11 @@
 
         <item
             android:id="@+id/nav_quot_visit"
-            android:title="Assigned Service Requests " />
+            android:title="Pending Sit Visists " />
 
         <item
             android:id="@+id/nav_assigned_services"
-            android:title="Assigned Services"/>
+            android:title="Proceed Services"/>
 
         <item
             android:id="@+id/nav_staff_feedback"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Staff.SelectLogin"
-    android:background="@drawable/wall_cladding">
+    android:background="@drawable/bg_login">
 
     <GridLayout
         android:layout_width="match_parent"

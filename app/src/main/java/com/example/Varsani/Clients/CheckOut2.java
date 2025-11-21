@@ -90,7 +90,7 @@ public class CheckOut2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_check_out2);
 
-        getSupportActionBar().setTitle("Send  Quotation Request ");
+        getSupportActionBar().setTitle("Complete Booking ");
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
