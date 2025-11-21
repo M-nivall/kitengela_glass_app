@@ -38,7 +38,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Road C, Off Enterprise Road, Industrial Area, Nairobi."
+                android:text="Ongata Rongai, off Maasai Lodge."
                 android:paddingStart="8dp"
                 android:textSize="16sp" />
         </LinearLayout>
@@ -57,7 +57,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+254 733 374 022"
+                android:text="+254 734 400 100"
                 android:paddingStart="8dp"
                 android:textSize="16sp" />
         </LinearLayout>
@@ -75,7 +75,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+254 722 582 500"
+                android:text="+254 700 445 500"
                 android:paddingStart="8dp"
                 android:textSize="16sp" />
         </LinearLayout>
@@ -94,7 +94,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="info@woodwayskenya.com"
+                android:text="info@kitengelaglasses.com"
                 android:paddingStart="8dp"
                 android:textSize="16sp" />
         </LinearLayout>
@@ -112,7 +112,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="info@woodways.com"
+                android:text="info@kitengelaglass.com"
                 android:paddingStart="8dp"
                 android:textSize="16sp" />
         </LinearLayout>

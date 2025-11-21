@@ -100,7 +100,11 @@ public class MyRequests extends AppCompatActivity {
                                     String requestStatus=jsn.getString("requestStatus");
                                     String quantity=jsn.getString("quantity");
 
-                                    MyRequetsModel rq=new MyRequetsModel(requestID, items,  requestDate,  requestStatus, quantity);
+                                    String quantity_price=jsn.getString("quantity_price");
+                                    String bid_approval=jsn.getString("bid_approval");
+
+                                    MyRequetsModel rq=new MyRequetsModel(requestID, items,  requestDate,  requestStatus, quantity,
+                                            quantity_price, bid_approval);
                                     list.add(rq);
                                 }
                                 adapter=new AdapterMyRequest(getApplicationContext(),list);

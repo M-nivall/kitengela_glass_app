@@ -77,32 +77,40 @@ public class AdapterMyRequest extends RecyclerView.Adapter<RecyclerView.ViewHold
         if (holder instanceof OriginalViewHolder) {
             final OriginalViewHolder view = (OriginalViewHolder) holder;
 
-            final MyRequetsModel o= items.get(position);
+            final MyRequetsModel o = items.get(position);
 
-            view.txv_requestID.setText(" No: "+o.getRequestID());
+            view.txv_requestID.setText("No: " + o.getRequestID());
             view.txv_requestDate.setText(o.getRequestDate());
-            view.txv_requestStatus.setText("Status: "+o.getRequestStatus());
-            view.txv_items.setText("Items: "+o.getItems());
-            view.txv_quantity.setText("Quantity :"+o.getQuantity()+"m2");
+            view.txv_items.setText("Items: " + o.getItems());
+            view.txv_quantity.setText("Quantity: " + o.getQuantity() + "m2");
+
+            //  Check bid approval
+            if ("Approved".equalsIgnoreCase(o.getBid_approval())) {
+                view.txv_requestStatus.setText("Status: Approved");
+            } else {
+                view.txv_requestStatus.setText("Status: " + o.getRequestStatus());
+            }
 
             view.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
 
-                    Intent in=new Intent(ctx, Accept.class);
+                    Intent in = new Intent(ctx, Accept.class);
                     in.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     in.putExtra("requestID", o.getRequestID());
-                    in.putExtra("item",o.getItems());
-                    in.putExtra("requestStatus",o.getRequestStatus());
-                    in.putExtra("requestDate",o.getRequestDate());
-                    in.putExtra("quantity",o.getQuantity());
+                    in.putExtra("item", o.getItems());
+                    in.putExtra("requestStatus", o.getRequestStatus());
+                    in.putExtra("requestDate", o.getRequestDate());
+                    in.putExtra("quantity", o.getQuantity());
+                    in.putExtra("quantity_price", o.getQuantity_price());
+                    in.putExtra("bid_approval", o.getBid_approval());
                     ctx.startActivity(in);
 
                 }
             });
-
         }
     }
+
 
 
     @Override

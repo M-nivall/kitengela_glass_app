@@ -102,7 +102,7 @@ public class ReceiptPayment extends AppCompatActivity {
                                     tvRequestDate.setText("Date: " + requestDate);
                                     tvRequestStatus.setText("Status: " + requestStatus);
                                     tvQuantity.setText("Quantity: " + quantity);
-                                    tv_request_amount.setText("Amount: " + amount);
+                                    tv_request_amount.setText("Amount: KSH " + amount);
                                 }
                             } else {
                                 showToast(msg);

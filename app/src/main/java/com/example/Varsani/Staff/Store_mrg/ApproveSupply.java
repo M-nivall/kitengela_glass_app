@@ -1,6 +1,7 @@
 package com.example.Varsani.Staff.Store_mrg;
 
 import static com.example.Varsani.utils.Urls.URL_ACCEPT;
+import static com.example.Varsani.utils.Urls.URL_APPROVE_BID;
 import static com.example.Varsani.utils.Urls.URL_APPROVE_TENDER;
 import static com.example.Varsani.utils.Urls.URL_GET_APPROVE_ORDERS;
 
@@ -16,6 +17,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -39,10 +41,11 @@ import java.util.Map;
 
 public class ApproveSupply extends AppCompatActivity {
 
-    private TextView txv_requestID,txv_name,txv_items,txv_qty,
+    private TextView txv_requestID,txv_name,txv_items,txv_qty,txv_bid_price,
             txv_requestDate, txv_requestStatus,edt_quotation, edt_expectedDate ,txv_amount;
+    private LinearLayout layout_bid;
 
-    private Button btn_submit;
+    private Button btn_submit, btn_approve_bid;
     private ProgressBar progressBar;
     private String requestID,bid_price, bid_approval, supplierID;
 
@@ -67,6 +70,10 @@ public class ApproveSupply extends AppCompatActivity {
         txv_amount = findViewById(R.id.txv_prop_amount);
         txv_qty = findViewById(R.id.txv_qty);
 
+        layout_bid = findViewById(R.id.layout_bid);
+        txv_bid_price = findViewById(R.id.txv_bid_price);
+        btn_approve_bid = findViewById(R.id.btn_approve_bid);
+
         session=new SessionHandler(getApplicationContext());
         user=session.getUserDetails();
 
@@ -87,7 +94,15 @@ public class ApproveSupply extends AppCompatActivity {
         txv_amount.setText("Invoiced Amount:"+in.getStringExtra("amount"));
         txv_qty.setText("Quantity: "+in.getStringExtra("quantity"));
 
+        if (!bid_price.equalsIgnoreCase("NULL") && bid_approval.equalsIgnoreCase("Pending")){
+            layout_bid.setVisibility(View.VISIBLE);
+            btn_submit.setVisibility(View.GONE);
+            txv_bid_price.setText("Bided Unit Price: KES " + bid_price);
+        }
+
         btn_submit.setOnClickListener(v-> approve());
+
+        btn_approve_bid.setOnClickListener(v-> approveBid());
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -100,6 +115,61 @@ public class ApproveSupply extends AppCompatActivity {
     public void approve(){
 
         StringRequest stringRequest=new StringRequest(Request.Method.POST, URL_APPROVE_TENDER,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+
+                        try {
+                            Log.e("RESPONSE",response);
+                            JSONObject jsonObject=new JSONObject(response);
+                            String status=jsonObject.getString("status");
+                            String msg=jsonObject.getString("message");
+                            if (status.equals("1")){
+
+                                Toast toast= Toast.makeText(ApproveSupply.this, msg, Toast.LENGTH_SHORT);
+                                toast.setGravity(Gravity.TOP,0,250);
+                                toast.show();
+                                finish();
+                            }else{
+
+                                Toast toast= Toast.makeText(ApproveSupply.this, msg, Toast.LENGTH_SHORT);
+                                toast.setGravity(Gravity.TOP,0,250);
+                                toast.show();
+                            }
+
+                        }catch (Exception e){
+                            e.printStackTrace();
+                            Toast toast= Toast.makeText(ApproveSupply.this, e.toString(), Toast.LENGTH_SHORT);
+                            toast.setGravity(Gravity.TOP,0,250);
+                            toast.show();
+                        }
+
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                error.printStackTrace();
+                Toast toast= Toast.makeText(ApproveSupply.this, error.toString(), Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.TOP,0,250);
+                toast.show();
+            }
+        }){
+            @Override
+            protected Map<String,String> getParams()throws AuthFailureError {
+                Map<String,String> params=new HashMap<>();
+
+                params.put("requestID",requestID);
+                Log.e("PARAMS",""+params);
+                return params;
+            }
+        };
+        RequestQueue requestQueue= Volley.newRequestQueue(getApplicationContext());
+        requestQueue.add(stringRequest);
+    }
+
+    public void approveBid(){
+
+        StringRequest stringRequest=new StringRequest(Request.Method.POST, URL_APPROVE_BID,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

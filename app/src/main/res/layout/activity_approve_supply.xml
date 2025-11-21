@@ -30,7 +30,7 @@
                 android:layout_height="100dp"
                 android:layout_gravity="center"
                 android:contentDescription="Woodways Logo"
-                android:src="@drawable/woodways_logo"
+                android:src="@drawable/kitengela_logo"
                 android:layout_marginBottom="10dp"
                 android:backgroundTint="@android:color/transparent"
                 android:scaleType="fitCenter"/>
@@ -39,7 +39,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Confirm Supply"
+                android:text="Supply Information"
                 android:textSize="22sp"
                 android:textStyle="bold"
                 android:textColor="#1B5E20"
@@ -154,6 +154,40 @@
                         android:backgroundTint="#4CAF50"
                         android:layout_marginBottom="10dp"
                         android:paddingVertical="10dp"/>
+
+                    <!-- Bidded Price Section -->
+                    <LinearLayout
+                        android:id="@+id/layout_bid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingTop="10dp"
+                        android:visibility="gone"
+                        android:paddingBottom="10dp">
+
+                        <!-- Bidded Price -->
+                        <TextView
+                            android:id="@+id/txv_bid_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Bidded Price: KES 0"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="#212121"
+                            android:layout_marginBottom="12dp"/>
+
+                        <!-- Approve Bid Button -->
+                        <Button
+                            android:id="@+id/btn_approve_bid"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Approve Bid"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/white"
+                            android:backgroundTint="#2E7D32"
+                            android:paddingVertical="10dp"/>
+                    </LinearLayout>
+
 
                     <!-- Progress Bar -->
                     <ProgressBar

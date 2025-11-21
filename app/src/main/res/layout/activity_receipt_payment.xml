@@ -1,37 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="16dp"
-    app:cardElevation="4dp"
-    app:cardCornerRadius="8dp"
-    app:cardBackgroundColor="@android:color/white"
-    tools:context=".Suppliers.ReceiptPayment">
+    app:cardElevation="6dp"
+    app:cardCornerRadius="12dp"
+    app:cardBackgroundColor="#FAFAFA">
 
-    <!-- Inner LinearLayout (Header + Body + Footer) -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="16dp">
+
         <!-- Print Button -->
         <ImageView
             android:id="@+id/btn_printfile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_gravity="center"
-            android:layout_margin="15dp"
-            android:contentDescription="print"
-            android:src="@drawable/ic_print" />
+            android:layout_marginBottom="12dp"
+            android:contentDescription="Print"
+            android:src="@drawable/ic_print"
+            app:tint="#555555" />
 
         <!-- Header Section -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="@color/colorPrimary"
+            android:background="#37474F"
             android:padding="16dp"
             android:gravity="center">
 
@@ -39,8 +38,8 @@
                 android:id="@+id/tv_company_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Woodways Payment Receipt"
-                android:textColor="#FFFFFF"
+                android:text="Kitengela Glass Payment Receipt"
+                android:textColor="#ECEFF1"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:gravity="center" />
@@ -49,84 +48,89 @@
                 android:id="@+id/tv_company_address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Enterprise Road, Industrial Area, Nairobi."
-                android:textColor="#FFFFFF"
-                android:textSize="14sp"
-                android:gravity="center" />
+                android:text="Ongata Rongai, off Maasai Lodge"
+                android:textColor="#CFD8DC"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:layout_marginTop="4dp" />
 
             <TextView
                 android:id="@+id/tv_company_contact"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Contact: +254 733 374 022"
-                android:textColor="#FFFFFF"
-                android:textSize="14sp"
-                android:gravity="center" />
-
+                android:textColor="#CFD8DC"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:layout_marginTop="2dp" />
         </LinearLayout>
 
-        <!-- Body Section (Receipt Details) -->
+        <!-- Body Section -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:background="#ECEFF1"
             android:padding="16dp"
-            android:background="@android:color/white"
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="16dp"
+            android:elevation="1dp"
+            android:layout_marginBottom="8dp">
 
             <TextView
                 android:id="@+id/tv_request_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Request ID: "
-                android:textSize="16sp"
-                android:textColor="#000000"
-                android:paddingBottom="8dp"/>
+                android:textSize="15sp"
+                android:textColor="#263238"
+                android:paddingBottom="4dp"
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/tv_items"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Items: "
-                android:textSize="16sp"
-                android:textColor="#000000"
-                android:paddingBottom="8dp"/>
+                android:textSize="15sp"
+                android:textColor="#263238"
+                android:paddingBottom="4dp"/>
 
             <TextView
                 android:id="@+id/tv_request_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Request Date: "
-                android:textSize="16sp"
-                android:textColor="#000000"
-                android:paddingBottom="8dp"/>
+                android:textSize="15sp"
+                android:textColor="#263238"
+                android:paddingBottom="4dp"/>
 
             <TextView
                 android:id="@+id/tv_request_status"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Request Status: "
-                android:textSize="16sp"
-                android:textColor="#000000"
-                android:paddingBottom="8dp"/>
+                android:textSize="15sp"
+                android:textColor="#263238"
+                android:paddingBottom="4dp"/>
 
             <TextView
                 android:id="@+id/tv_quantity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Quantity: "
-                android:textSize="16sp"
-                android:textColor="#000000"
-                android:paddingBottom="8dp"/>
+                android:textSize="15sp"
+                android:textColor="#263238"
+                android:paddingBottom="4dp"/>
+
             <TextView
                 android:id="@+id/tv_request_amount"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Amount"
-                android:textColor="@color/colorBlack"
-                android:textSize="15sp"
-                android:paddingTop="4dp"/>
-
+                android:text="Amount: "
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:paddingTop="6dp"/>
         </LinearLayout>
 
         <!-- Footer Section -->
@@ -134,28 +138,30 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="@color/colorPrimary"
+            android:background="#607D8B"
             android:padding="16dp"
             android:gravity="center"
-            android:layout_marginTop="16dp">
+            android:elevation="1dp">
 
             <TextView
                 android:id="@+id/tv_footer_message"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Thank you for your business!"
-                android:textColor="#FFFFFF"
+                android:textColor="#ECEFF1"
                 android:textSize="14sp"
-                android:gravity="center" />
+                android:gravity="center"
+                android:textStyle="italic"/>
 
             <TextView
                 android:id="@+id/tv_footer_contact"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="For inquiries, contact info@woodwayskenya.com"
-                android:textColor="#FFFFFF"
-                android:textSize="14sp"
-                android:gravity="center" />
+                android:text="For inquiries: info@kitengelaglass.com"
+                android:textColor="#ECEFF1"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:layout_marginTop="4dp"/>
         </LinearLayout>
 
     </LinearLayout>
