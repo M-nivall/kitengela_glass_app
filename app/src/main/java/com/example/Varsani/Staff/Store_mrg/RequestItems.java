@@ -105,8 +105,12 @@ public class RequestItems extends AppCompatActivity {
                                     String requestStatus=jsn.getString("requestStatus");
                                     String amount=jsn.getString("amount");
                                     String quantity=jsn.getString("quantity");
+
+                                    String quantity_price=jsn.getString("quantity_price");
+                                    String bid_approval=jsn.getString("bid_approval");
+
                                     RequestModel rq=new RequestModel(requestID,  name,  phoneNo,
-                                             items,  requestDate,  requestStatus, amount, quantity);
+                                             items,  requestDate,  requestStatus, amount, quantity, quantity_price, bid_approval);
                                     list.add(rq);
                                 }
                                 adapter=new AdapterRequest(getApplicationContext(),list);

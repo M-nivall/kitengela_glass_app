@@ -44,7 +44,7 @@ public class ApproveSupply extends AppCompatActivity {
 
     private Button btn_submit;
     private ProgressBar progressBar;
-    private String requestID, supplierID;
+    private String requestID,bid_price, bid_approval, supplierID;
 
     private SessionHandler session;
     private UserModel user;
@@ -74,6 +74,9 @@ public class ApproveSupply extends AppCompatActivity {
 
         Intent in=getIntent();
         requestID=in.getStringExtra("requestID");
+
+        bid_approval=in.getStringExtra("bid_approval");
+        bid_price=in.getStringExtra("bid_price");
 
 
         txv_requestID.setText("Tender No: "+in.getStringExtra("requestID"));

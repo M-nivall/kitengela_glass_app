@@ -103,8 +103,12 @@ public class RequestedMaterials extends AppCompatActivity {
                                     String requestStatus=jsn.getString("requestStatus");
                                     String amount=jsn.getString("amount");
                                     String quantity=jsn.getString("amount");
+
+                                    String quantity_price=jsn.getString("amount");
+                                    String bid_approval=jsn.getString("amount");
+
                                     RequestModel rq=new RequestModel(requestID,  name,  phoneNo,
-                                            items,  requestDate,  requestStatus, amount, quantity);
+                                            items,  requestDate,  requestStatus, amount, quantity, quantity_price,bid_approval);
                                     list.add(rq);
                                 }
                                 adapter=new AdapterMaterials(getApplicationContext(),list);

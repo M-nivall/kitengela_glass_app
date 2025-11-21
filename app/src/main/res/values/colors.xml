@@ -14,4 +14,8 @@
     <color name="red">#D81B1B</color>
     <color name="colorLightGray">#F5F5F5</color>  <!-- Soft Light Gray -->
     <color name="background_light">#F5F5F5</color>
+
+    <color name="dividerColor">#D3D3D3</color>
+
+
 </resources>

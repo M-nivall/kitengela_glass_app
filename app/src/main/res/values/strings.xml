@@ -45,16 +45,16 @@
     <string-array name="products">
         <item>Select Product</item>
 
-        <item>Mahogany-Wood</item>
-        <item>Red-Oak-Wood</item>
-        <item>Local-Pine-Wood</item>
-        <item>Mvule-Wood</item>
-        <item>Sudanese-Teak-Wood</item>
-        <item>Walnut-Wood</item>
-        <item>Ordinary-Plywood</item>
-        <item>American-Walnut-Plywood</item>
-        <item>Birch-Plywood</item>
-        <item>Flexible-Plywood</item>
+        <item>Blown-glass-vese</item>
+        <item>Blown-glass-jug</item>
+        <item>Garden-jewellery</item>
+        <item>Beady-chandelier</item>
+        <item>Light-cups-chandeliar</item>
+        <item>Wall-brackets</item>
+        <item>Gurden-gurdian</item>
+        <item>Propellor-bowl</item>
+        <item>Armchair</item>
+        <item>Dalle-stool</item>
         <item>Mahogany-Veneer</item>
         <item>Wanut-Veneer</item>
         <item>Red-Oak-Veneer</item>
