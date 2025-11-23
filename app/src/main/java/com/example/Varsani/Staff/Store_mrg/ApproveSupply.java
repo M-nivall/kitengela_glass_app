@@ -108,6 +108,7 @@ public class ApproveSupply extends AppCompatActivity {
         btn_submit.setOnClickListener(v-> approve());
 
         btn_approve_bid.setOnClickListener(v-> approveBid());
+
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
