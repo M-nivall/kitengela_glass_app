@@ -1,190 +1,221 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F5F5F7"
     tools:context="com.example.Varsani.Clients.Help_in">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
+            <!-- Sign In Section -->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Sign in"
-                android:textStyle="bold"
-                android:textSize="30dp"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="You are required to sign in to:"
-                android:textStyle="bold"
-                android:textSize="15dp"
-                />
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:elevation="4dp"
+                android:padding="18dp"
+                android:layout_marginBottom="20dp"
+                android:clipToOutline="true">
 
-            <TextView
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/ic_dot"
-                android:text="Access your account to view our products."
-                android:textStyle="bold"
-                android:textSize="15dp"
-                />
-            <TextView
-                android:layout_marginTop="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/ic_dot"
-                android:text="Book and make payments on the app"
-                android:textStyle="bold"
-                android:textSize="15dp" />
-            <TextView
-                android:layout_marginTop="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/ic_dot"
-                android:text="View Bookings and print reciept"
-                android:textStyle="bold"
-                android:textSize="15dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sign In"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:textColor="#111"
+                    android:layout_marginBottom="12dp"/>
 
-            <TextView
-                android:layout_marginTop="15dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="You can sign in  with your username.To sign in:"
-                android:textStyle="bold"
-                android:textSize="15dp"
-                />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="You are required to sign in to:"
+                    android:textSize="16sp"
+                    android:textColor="#444"
+                    android:layout_marginBottom="10dp"/>
 
-            <TextView
-                android:layout_marginTop="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="1.Open the app."
-                android:textStyle="bold"
-                android:textSize="16dp"
-                />
-            <TextView
-                android:layout_marginTop="8dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="2.Take one of the following actions as promted:"
-                android:textStyle="bold"
-                android:textSize="16dp"
-                />
-            <TextView
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="15dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="If you had previously signed in to your account , you are prompted to sign back in . Enter  ‘your user name’ and password to promptly sign into your account."
-                android:textStyle="bold"
-                android:textSize="15dp"
-                />
-          <ImageView
-              android:visibility="gone"
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-              android:src="@drawable/cool_login" />
-            <TextView
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="15dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="If you are a new user or have not previously signed in to your account , you can sign up by clicking on register here. Tap the text to register."
-                android:textStyle="bold"
-                android:textSize="15dp"
-                />
-            <ImageView
-                android:visibility="gone"
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:src="@drawable/cool_reg"
-                />
+                <!-- Bullets -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Access your account to view our products."
+                    android:textSize="15sp"
+                    android:textColor="#000"
+                    android:layout_marginBottom="6dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Book and make payments on the app."
+                    android:textSize="15sp"
+                    android:textColor="#000"
+                    android:layout_marginBottom="6dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• View bookings and print receipts."
+                    android:textSize="15sp"
+                    android:textColor="#000"
+                    android:layout_marginBottom="12dp"/>
 
-            <TextView
-                android:layout_marginTop="15dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Sign out"
-                android:textStyle="bold"
-                android:textSize="30dp"
-                />
-            <TextView
-                android:layout_marginTop="8dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Signing out disables access to our services as well as your history in the app documents and workflows."
-                android:textStyle="bold"
-                android:textSize="16dp"
-                />
-            <TextView
-                android:layout_marginTop="8dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="To Sign Out Click on the the menu icon and select the logout tab"
-                android:textStyle="bold"
-                android:textSize="16dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="You can sign in with your username. To sign in:"
+                    android:textSize="16sp"
+                    android:textColor="#444"
+                    android:layout_marginBottom="8dp"/>
 
-            <TextView
-                android:layout_marginTop="15dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Order Product"
-                android:textStyle="bold"
-                android:textSize="30dp"
-                />
-            <TextView
-                android:layout_marginTop="8dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Signing out disables access to our services as well as your history in the app documents and workflows."
-                android:textStyle="bold"
-                android:textSize="16dp"
-                />
-            <TextView
-                android:layout_marginTop="8dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="To Sign Out Click on the the menu icon and select the logout tab"
-                android:textStyle="bold"
-                android:textSize="16dp" />
+                <!-- Steps -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1. Open the app."
+                    android:textSize="15sp"
+                    android:textColor="#000"
+                    android:layout_marginBottom="4dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2. Take one of the following actions as prompted:"
+                    android:textSize="15sp"
+                    android:textColor="#000"
+                    android:layout_marginBottom="6dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• If you had previously signed in, enter your username and password to log in."
+                    android:textSize="15sp"
+                    android:textColor="#000"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginBottom="6dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• If you are new, click 'Register' to create an account."
+                    android:textSize="15sp"
+                    android:textColor="#000"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginBottom="6dp"/>
 
-            <TextView
-                android:layout_marginTop="15dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Service Booking"
-                android:textStyle="bold"
-                android:textSize="30dp"
-                />
-            <TextView
-                android:layout_marginTop="8dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Signing out disables access to our services as well as your history in the app documents and workflows."
-                android:textStyle="bold"
-                android:textSize="16dp"
-                />
-            <TextView
-                android:layout_marginTop="8dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="To Sign Out Click on the the menu icon and select the logout tab"
-                android:textStyle="bold"
-                android:textSize="16dp" />
+                <!-- Optional Images -->
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:src="@drawable/cool_login"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="fitCenter"/>
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:src="@drawable/cool_reg"
+                    android:layout_marginTop="10dp"
+                    android:scaleType="fitCenter"/>
+            </LinearLayout>
 
+            <!-- Sign Out Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:elevation="4dp"
+                android:padding="18dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sign Out"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:textColor="#111"
+                    android:layout_marginBottom="12dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Signing out disables access to services and your app history."
+                    android:textSize="15sp"
+                    android:textColor="#000"
+                    android:layout_marginBottom="6dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="To sign out, click the menu icon and select 'Logout'."
+                    android:textSize="15sp"
+                    android:textColor="#000"/>
+            </LinearLayout>
+
+            <!-- Order Product Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:elevation="4dp"
+                android:padding="18dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Order Product"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:textColor="#111"
+                    android:layout_marginBottom="12dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Use the app to browse products, add to cart, and place orders easily."
+                    android:textSize="15sp"
+                    android:textColor="#000"/>
+            </LinearLayout>
+
+            <!-- Service Booking Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:elevation="4dp"
+                android:padding="18dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Service Booking"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    android:textColor="#111"
+                    android:layout_marginBottom="12dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Book services such as grooming, vaccination, and training through the app. Monitor and manage your bookings easily."
+                    android:textSize="15sp"
+                    android:textColor="#000"/>
+            </LinearLayout>
 
         </LinearLayout>
 
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
