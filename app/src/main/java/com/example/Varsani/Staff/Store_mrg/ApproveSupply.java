@@ -47,7 +47,7 @@ public class ApproveSupply extends AppCompatActivity {
 
     private Button btn_submit, btn_approve_bid;
     private ProgressBar progressBar;
-    private String requestID,bid_price, bid_approval, supplierID;
+    private String requestID,bid_price, bid_approval,requestStatus, supplierID;
 
     private SessionHandler session;
     private UserModel user;
@@ -84,6 +84,7 @@ public class ApproveSupply extends AppCompatActivity {
 
         bid_approval=in.getStringExtra("bid_approval");
         bid_price=in.getStringExtra("bid_price");
+        requestStatus=in.getStringExtra("requestStatus");
 
 
         txv_requestID.setText("Tender No: "+in.getStringExtra("requestID"));
@@ -98,6 +99,10 @@ public class ApproveSupply extends AppCompatActivity {
             layout_bid.setVisibility(View.VISIBLE);
             btn_submit.setVisibility(View.GONE);
             txv_bid_price.setText("Bided Unit Price: KES " + bid_price);
+        }
+
+        if (requestStatus.equalsIgnoreCase("Pending approval")){
+            btn_submit.setVisibility(View.GONE);
         }
 
         btn_submit.setOnClickListener(v-> approve());
